@@ -23,11 +23,12 @@ gcloud beta compute firewall-rules create mhn-allow-admin --direction=INGRESS --
 
 Result 
 
-<img src="https://i.imgflip.com/27zs1q.gif" title="made at imgflip.com"/>
+<img src="M1"/>
 
 ### Milestone 2 : Install the MHN Admin Application 
 
 In this step we install the server and login to server using our"superuser"
+<img src="M2"/>
 
 ### Milestone 3 : Create a MHN Honeypot VM 
 
@@ -35,6 +36,7 @@ In this step we deploy Dionaea over HTTP
 
 Dionaea is "meant to be a nepenthes successor , embedding python as scripting language, using libemu to detect shellcodes, supporting ipv6 and tls"
 
+<img src="M3"/>
 ### Milestone 4 : Install the Honeypot Application
 
 In this step we install honeypot application into the VM and wire it to connect back to the admin server.
@@ -43,28 +45,60 @@ The wget command executed inside the honeypot VM to install the Dionae sorftware
 
 wget "http://35.184.8.8/api/script/?text=true&script_id=4" -O deploy.sh && sudo bash deploy.sh http://35.184.8.8 yYw8AEVE
 
-<img src="https://i.imgflip.com/27zt00.gif" title="made at imgflip.com"/>
-
-<img src="https://i.imgflip.com/27zt7p.gif" title="made at imgflip.com"/>
+<img src="M4"/>
 
 ### Milestone 5 : Attack!
 
 In this step we can make sure everything is set up correctly and working by using nmap command.
+1) Dionea
+```sigintz@mhn-honeypot-1:~$ nmap 35.185.194.21
 
-<img src="https://i.imgflip.com/27zth7.gif" title="made at imgflip.com"/>
+Starting Nmap 6.40 ( http://nmap.org ) at 2022-07-06 20:15 UTC
+Nmap scan report for 21.194.185.35.bc.googleusercontent.com (35.185.194.21)
+Host is up (0.0022s latency).
+Not shown: 988 closed ports
+PORT     STATE    SERVICE
+21/tcp   open     ftp
+22/tcp   open     ssh
+25/tcp   filtered smtp
+42/tcp   open     nameserver
+135/tcp  open     msrpc
+445/tcp  open     microsoft-ds
+465/tcp  filtered smtps
+587/tcp  filtered submission
+1433/tcp open     ms-sql-s
+3306/tcp open     mysql
+5060/tcp open     sip
+5061/tcp open     sip-tls
+
+Nmap done: 1 IP address (1 host up) scanned in 1.24 seconds
+```
+
+2) Dionea with HTTP:
+```sigintz@mhn-honeypot-2:~$ nmap 35.197.36.229
+
+Starting Nmap 6.40 ( http://nmap.org ) at 2022-07-06 20:29 UTC
+Nmap scan report for 229.36.197.35.bc.googleusercontent.com (35.197.36.229)
+Host is up (0.0028s latency).
+Not shown: 986 closed ports
+PORT     STATE    SERVICE
+21/tcp   open     ftp
+22/tcp   open     ssh
+25/tcp   filtered smtp
+42/tcp   open     nameserver
+80/tcp   open     http
+135/tcp  open     msrpc
+443/tcp  open     https
+445/tcp  open     microsoft-ds
+465/tcp  filtered smtps
+587/tcp  filtered submission
+1433/tcp open     ms-sql-s
+3306/tcp open     mysql
+5060/tcp open     sip
+5061/tcp open     sip-tls
+
+Nmap done: 1 IP address (1 host up) scanned in 1.25 seconds
+```
+<img src="M5"/>
 
 
-<img src="https://i.imgflip.com/27ztnb.gif" title="made at imgflip.com"/>
-
-### Exporting Data
-
-Attempted to download file 
-
-gcloud compute scp mhn-admin:~/session.json ./session.json
-ERROR: (gcloud.compute.scp) Underspecified resource [mhn-admin]. Specify the [--zone] flag.
-
-sudo gcloud compute scp mhn-admin:~/session.json ./session.json --zone us-central1-c     
-ERROR: (gcloud.compute.scp) Could not fetch resource:
-Insufficient Permission
-
-<img src="https://i.imgflip.com/27zvyd.gif" title="made at imgflip.com"/>
