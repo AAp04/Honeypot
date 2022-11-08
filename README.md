@@ -53,7 +53,7 @@ In this step we can make sure everything is set up correctly and working by usin
 1) Dionea
 ```sigintz@mhn-honeypot-1:~$ nmap 35.185.194.21
 
-Starting Nmap 6.40 ( http://nmap.org ) at 2022-07-06 20:15 UTC
+Starting Nmap 6.40 ( http://nmap.org ) at 2022-11-07 20:15 UTC
 Nmap scan report for 21.194.185.35.bc.googleusercontent.com (35.185.194.21)
 Host is up (0.0022s latency).
 Not shown: 988 closed ports
@@ -77,7 +77,7 @@ Nmap done: 1 IP address (1 host up) scanned in 1.24 seconds
 2) Dionea with HTTP:
 ```sigintz@mhn-honeypot-2:~$ nmap 35.197.36.229
 
-Starting Nmap 6.40 ( http://nmap.org ) at 2022-07-06 20:29 UTC
+Starting Nmap 6.40 ( http://nmap.org ) at 2022-11-07 20:29 UTC
 Nmap scan report for 229.36.197.35.bc.googleusercontent.com (35.197.36.229)
 Host is up (0.0028s latency).
 Not shown: 986 closed ports
