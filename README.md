@@ -23,12 +23,12 @@ gcloud beta compute firewall-rules create mhn-allow-admin --direction=INGRESS --
 
 Result 
 
-<img src="M1"/>
+<img src="M1.png"/>
 
 ### Milestone 2 : Install the MHN Admin Application 
 
 In this step we install the server and login to server using our"superuser"
-<img src="M2"/>
+<img src="M2.png"/>
 
 ### Milestone 3 : Create a MHN Honeypot VM 
 
@@ -36,7 +36,7 @@ In this step we deploy Dionaea over HTTP
 
 Dionaea is "meant to be a nepenthes successor , embedding python as scripting language, using libemu to detect shellcodes, supporting ipv6 and tls"
 
-<img src="M3"/>
+<img src="M3.png"/>
 ### Milestone 4 : Install the Honeypot Application
 
 In this step we install honeypot application into the VM and wire it to connect back to the admin server.
@@ -45,7 +45,7 @@ The wget command executed inside the honeypot VM to install the Dionae sorftware
 
 wget "http://35.184.8.8/api/script/?text=true&script_id=4" -O deploy.sh && sudo bash deploy.sh http://35.184.8.8 yYw8AEVE
 
-<img src="M4"/>
+<img src="M4.png"/>
 
 ### Milestone 5 : Attack!
 
@@ -99,6 +99,6 @@ PORT     STATE    SERVICE
 
 Nmap done: 1 IP address (1 host up) scanned in 1.25 seconds
 ```
-<img src="M5"/>
+<img src="M5.png"/>
 
 
