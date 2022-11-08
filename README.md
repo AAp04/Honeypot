@@ -30,18 +30,6 @@
 
 <img src="x-honeypot.gif">
 
-### Malware Capture and Identification (Optional)
-
-#### X Malware
-
-**Summary:** How did you find it? Which honeypot captured it? What does each malware do?
-
-MD5 Hash: *Run `md5sum` on the file and record the hash here.*
-
-SHA1 Hash: *Run `sha1sum` on the file and record the hash here.*
-
-<img src="x-malware.gif">
-
 ## Notes
 
 Describe any challenges encountered while doing the assignment.
