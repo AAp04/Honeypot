@@ -31,9 +31,6 @@ JSON export of the data you collected in the Attack repot
 "It's a sacrificial computer system that's intended to attract cyberattacks, like a decoy. It mimics a target for hackers, and uses their intrusion attempts to gain information about cybercriminals and the way they are operating or to distract them from other targets." (https://tinyurl.com/578v6f45)
 <img src="M5-1.png">
 
-### Malware Capture and Identification (Optional)
-
-#### X Malware
 
 
 ## Notes
