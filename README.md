@@ -37,6 +37,7 @@ In this step we deploy Dionaea over HTTP
 Dionaea is "meant to be a nepenthes successor , embedding python as scripting language, using libemu to detect shellcodes, supporting ipv6 and tls"
 
 <img src="M3.png"/>
+
 ### Milestone 4 : Install the Honeypot Application
 
 In this step we install honeypot application into the VM and wire it to connect back to the admin server.
